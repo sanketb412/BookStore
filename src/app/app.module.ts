@@ -15,6 +15,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 import { LoginuserComponent } from './components/loginuser/loginuser.component';
 import { SignupuserComponent } from './components/signupuser/signupuser.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SignupuserComponent } from './components/signupuser/signupuser.componen
     LoginComponent,
     LoginuserComponent,
     SignupuserComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,

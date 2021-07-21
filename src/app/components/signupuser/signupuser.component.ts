@@ -37,5 +37,4 @@ export class SignupuserComponent implements OnInit {
   
   ngOnInit(): void {
   }
-
 }

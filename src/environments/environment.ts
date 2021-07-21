@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://new-bookstore-backend.herokuapp.com/bookstore_app/swagger/api/#'
+  baseUrl: 'https://new-bookstore-backend.herokuapp.com'
 };
 
 /*
