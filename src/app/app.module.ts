@@ -16,6 +16,12 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { LoginuserComponent } from './components/loginuser/loginuser.component';
 import { SignupuserComponent } from './components/signupuser/signupuser.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { BooksComponent } from './components/books/books.component';
+import { AddressComponent } from './components/address/address.component';
+import { ProductpageComponent } from './components/productpage/productpage.component';
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +29,13 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
     LoginComponent,
     LoginuserComponent,
     SignupuserComponent,
-    HomepageComponent
+    HomepageComponent,
+    HeaderComponent,
+    FooterComponent,
+    BooksComponent,
+    AddressComponent,
+    ProductpageComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
