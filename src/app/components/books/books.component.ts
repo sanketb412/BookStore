@@ -9,7 +9,7 @@ import { BookServiceService } from 'src/app/services/bookService/book-service.se
 })
 export class BooksComponent implements OnInit {
 
-  books:any=[];
+  books: Array<any> =[];
   
   constructor(private bookService: BookServiceService) { }
 
@@ -19,7 +19,7 @@ export class BooksComponent implements OnInit {
 
   getData = () => {
     this.bookService.getBook().subscribe((data:any)=>{
-      this.books=data['data']
+      this.books=data['result']
       console.log(this.books)  
     })
   }

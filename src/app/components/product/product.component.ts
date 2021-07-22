@@ -7,11 +7,12 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  @Input() books: any
+  @Input() books: any ;
   
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
