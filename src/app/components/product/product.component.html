@@ -1,10 +1,20 @@
 
-<div class="block">
-    <div class="bookImg"  >
-        <ng-container *ngFor="let book of books">
-            <h5>{{book.description}}</h5>
-        </ng-container>
+<div class="displayBox">
+<ng-container *ngFor="let book of books">
+    <div>
+        <div class="bookImg">
+            <img src="../../../assets/books/Image 12.png">
+        </div>
+        <div class="block">
+            <h5 class="description" >{{book.description}}</h5>
+            <h5 class="author">by {{book.author}}</h5>
+            <div>
+                
+            </div>
+        </div>
     </div>
+</ng-container>
 </div>
+
 <!-- <router-outlet></router-outlet> -->
 <!-- routerLink="productpage" -->
