@@ -4,6 +4,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './pages/homepage/homepage.component';
+import { ProductpageComponent } from './components/productpage/productpage.component';
 const routes: Routes = [
   {
     path: '', 
@@ -13,7 +14,11 @@ const routes: Routes = [
       {path: 'signup', component: SignupuserComponent},
     ]
   },
-  { path: 'home', component: HomepageComponent }
+  { path: 'home', component: HomepageComponent,
+  children: [
+    {path: 'productpage', component: ProductpageComponent}
+  ]  
+}
 ];
 
 @NgModule({

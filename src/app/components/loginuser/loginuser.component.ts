@@ -26,18 +26,18 @@ export class LoginuserComponent implements OnInit {
   submit() {
     // console.log(this.form); 
     if (this.form.valid) {
-      let data = {
+      let dataLogin = {
         "email": this.form.controls.userName.value,
         "password": this.form.controls.password.value,
       }
       
-      this.service.login(data).subscribe((data: any) => {
-        console.log(data);
+      this.service.login(dataLogin).subscribe((dataLogin: any) => {
 
-        localStorage.setItem("fullName", data["fullName"]);
-        localStorage.setItem("email", data["email"]);
-        localStorage.setItem("token", data["id"]);
+        localStorage.setItem("fullName", dataLogin["fullName"]);
+        localStorage.setItem("email", dataLogin["email"]);
+        localStorage.setItem("token", dataLogin["id"]);
         this.router.navigate(['/home'])
+        
       });
     }
   }

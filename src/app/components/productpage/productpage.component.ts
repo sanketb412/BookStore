@@ -10,6 +10,11 @@ export class ProductpageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.getData();
+  }
+
+  getData() {
+    
   }
 
 }

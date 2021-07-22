@@ -1,6 +1,10 @@
 
 <div class="block">
-    <div class="bookImg">
-        
+    <div class="bookImg"  >
+        <ng-container *ngFor="let book of books">
+            <h3>{{book.description}}</h3>
+        </ng-container>
     </div>
 </div>
+<!-- <router-outlet></router-outlet> -->
+<!-- routerLink="productpage" -->
