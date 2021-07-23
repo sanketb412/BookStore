@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import {MatMenuModule} from '@angular/material/menu';
 
 import { LoginuserComponent } from './components/loginuser/loginuser.component';
 import { SignupuserComponent } from './components/signupuser/signupuser.component';
@@ -48,7 +49,8 @@ import { ProductComponent } from './components/product/product.component';
     MatIconModule,
     MatDividerModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

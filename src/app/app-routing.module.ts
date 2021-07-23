@@ -10,15 +10,12 @@ const routes: Routes = [
     path: '', 
     component: LoginComponent,
     children: [
-      {path: 'login', component: LoginuserComponent},
-      {path: 'signup', component: SignupuserComponent},
+      { path: 'login', component: LoginuserComponent },
+      { path: 'signup', component: SignupuserComponent },
     ]
   },
-  { path: 'home', component: HomepageComponent,
-  children: [
-    {path: 'productpage', component: ProductpageComponent}
-  ]  
-}
+  { path: 'home', component: HomepageComponent },
+  { path: 'productpage', component: ProductpageComponent }
 ];
 
 @NgModule({

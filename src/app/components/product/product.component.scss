@@ -4,30 +4,49 @@
     justify-content: flex-start;
 }
 
+.productBody{
+    width: 235px;
+    height: 275px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E2E2E2;
+    border-radius: 3px;
+    opacity: 1;
+    margin: 0px 0px 26px 27px;
+    cursor: pointer;
+}
+
+.productBody:hover{
+    box-shadow: 2px 2px 5px 2px rgba(173, 170, 170, 0.8);
+}
+
 .block{
     height: 102px;
     width: 233px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #E2E2E2;
-    border-radius: 3px;
+    border-radius: 0px 0px 3px 3px;
     opacity: 1;
-    margin-right: 65px;
-    margin-bottom: 40px;
     border-top: transparent;
 }
+
+
 
 .bookImg{
     width: 233px;
     height: 172px;
-    background: #F5F5F5 0% 0% no-repeat padding-box;
+    background: #efefef 0% 0% no-repeat padding-box;
     border: 1px solid #E2E2E2;
     border-bottom: transparent;
     border-radius: 2px 2px 0px 0px;
     opacity: 1;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+img {
+    width: 105px;
+    height: 135px;
 }
 
 .description{
@@ -38,6 +57,13 @@
     color: #0A0102;
     opacity: 1;
     margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.description:hover {
+    overflow: visible;
 }
 
 .author{
@@ -63,6 +89,7 @@
     opacity: 1;
     display: flex;
     align-items: baseline;
+    padding-left: 3px;
 }
 
 .star{
@@ -81,4 +108,21 @@
     letter-spacing: 0px;
     color: #0A0102;
     opacity: 1;
+}
+
+.view{
+    position: relative;
+    right: -35%;
+    top: -91%;
+    background-color: #888888;
+    width: 65px;
+    color: #FFFFFF;
+    height: 16px;
+    font-size: smaller;
+    visibility: hidden;
+    padding: 0px 3px 2px 3px;
+}
+
+.productBody:hover .view {
+   visibility: visible; 
 }

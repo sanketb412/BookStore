@@ -1,24 +1,25 @@
 
 <div class="displayBox">
-<ng-container *ngFor="let book of books">
-    <div>
-        <div class="bookImg" routerLink="productpage">
-            <img src="../../../assets/books/Image 12.png">
-        </div> 
-        <div class="block">
-            <h5 class="description" >{{book.description}}</h5>
-            <h5 class="author">by {{book.author}}</h5>
-            <div class="quantityAndRate">
-                <div class="rate">
-                    <p style="color: white; margin: 0;"> 4.5</p>
-                    <mat-icon class="star">grade</mat-icon>
+    <ng-container *ngFor="let book of books">
+        <div class="productBody">
+            <div class="bookImg" routerLink="productpage">
+                <img (click)="toProductPage(book)" class="img" src="../../../assets/books/Image 12.png">
+            </div> 
+            <div class="block">
+                <h5 class="description" >{{book.description}}</h5>
+                <h5 class="author">by {{book.author}}</h5>
+                <div class="quantityAndRate">
+                    <div class="rate">
+                        <p style="color: white; margin: 0;"> 4.5</p>
+                        <mat-icon class="star">grade</mat-icon>
+                    </div>
+                    <h5 style="color: #878787;">({{book.quantity}})</h5>
                 </div>
-                <h5 style="color: #878787;">({{book.quantity}})</h5>
+                <h5 class="price"> Rs. {{book.price}}</h5>
+                <div class="view">QUICK VIEW</div>
             </div>
-            <h5 class="price"> Rs. {{book.price}}</h5>
         </div>
-    </div>
-</ng-container>
+    </ng-container>
 </div>
 
 <!-- <router-outlet></router-outlet> -->
