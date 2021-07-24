@@ -1,5 +1,13 @@
-.main{
-    height: 100%;
+.container{
     width: 100%;
-    background-color: coral;
+    height: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main{
+    background-color: #FFFFFF;
+    margin: 0px 307px 0px 220px;
 }

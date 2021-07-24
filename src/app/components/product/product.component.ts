@@ -19,8 +19,7 @@ export class ProductComponent implements OnInit {
     
   }
 
-  toProductPage(book: any){
-    this.book = book
-    this.router.navigate(['/productpage'])
+  toProductPage(){
+    this.router.navigate(['productpage'])
   }
 }

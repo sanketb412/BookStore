@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-productpage',
@@ -8,14 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductpageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router) { 
+    // console.log(this.route.getCurrentNavigation()?.extras.state);
+  }
 
   ngOnInit(): void {
     this.getData();
   }
 
   getData() {
-    
+   
   }
 
 }
