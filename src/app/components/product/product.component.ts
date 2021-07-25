@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -10,16 +10,18 @@ import { Router } from '@angular/router';
 export class ProductComponent implements OnInit {
 
   @Input() books: any ;
-  
-  book:any
-  
+
+  id:any
+
   constructor( private router: Router) { }
 
   ngOnInit(): void {
-    
   }
 
-  toProductPage(){
-    this.router.navigate(['productpage'])
+  toProductPage(id: any){
+    this.id = id
+    this.router.navigate(['productpage/'], {state: {value: id }})
   }
 }
+
+

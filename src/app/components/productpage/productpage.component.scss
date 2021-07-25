@@ -8,6 +8,42 @@
 }
 
 .main{
-    background-color: #FFFFFF;
-    margin: 0px 307px 0px 220px;
+    height: 100%;
+    background-color: #bd5858;
+    margin: 0px 253px 0px 253px;
 }
+
+
+// .home{
+//     background-color: #FFFFFF;
+//     height: 9%;
+// }
+
+// .imgDiv{
+//     width: 35%;
+//     height: 100%;
+//     background-color: #FFFFFF;
+//     display: flex;
+// }
+
+.imgCell{
+    width: 361px;
+    height: 413px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #D1D1D1;
+    border-radius: 2px;
+    opacity: 1;
+}
+
+.imgMain{
+    padding: 22px 40px 22px 40px;
+    width: 282px;
+    height: 367px;
+    opacity: 1;
+}
+// .content{
+//     background-color: aqua;
+//     height: 100%;
+//     width: 60%;
+// }
+

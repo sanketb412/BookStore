@@ -10,7 +10,6 @@ import { BookServiceService } from 'src/app/services/bookService/book-service.se
 export class BooksComponent implements OnInit {
 
   books: Array<any> =[];
-  
   constructor(private bookService: BookServiceService) { }
 
   ngOnInit(): void {

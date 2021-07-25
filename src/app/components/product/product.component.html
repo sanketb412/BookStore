@@ -3,7 +3,7 @@
     <ng-container *ngFor="let book of books">
         <div class="productBody">
             <div class="bookImg" routerLink="productpage">
-                <img (click)="toProductPage()" class="img" src="../../../assets/books/Image 36.png">
+                <img (click)="toProductPage(book)" class="img" src="../../../assets/books/Image 36.png">
             </div> 
             <div class="block">
                 <h5 class="description" >{{book.description}}</h5>

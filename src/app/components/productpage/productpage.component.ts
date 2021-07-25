@@ -1,3 +1,4 @@
+import { getLocaleDateFormat } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -8,16 +9,20 @@ import { Router } from '@angular/router';
 })
 export class ProductpageComponent implements OnInit {
 
-  constructor(private route: Router) { 
-    // console.log(this.route.getCurrentNavigation()?.extras.state);
+  data: any
+
+  constructor(private router: Router) { 
+    this.data = this.router.getCurrentNavigation()?.extras.state;
+    console.log(this.data)
   }
 
   ngOnInit(): void {
-    this.getData();
+    this.getData()
   }
 
-  getData() {
-   
+  getData = () => {
+    this.data=this.data['value']
   }
-
 }
+
+
