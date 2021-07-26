@@ -4,44 +4,65 @@
     <app-header></app-header>
 
     <!-- Main Content -->
-        <div class="main">
-            <div style="background-color: #FFFFFF; height: 10%;">
-                home
+    <div class="main">
+        <div style="background-color: #FFFFFF; height: 10%;">
+            home
+        </div>
+        <div class="content">
+            <div class="row_1st">
+                <img src="../../../assets/books/Image 1.png">
+                <img src="../../../assets/books/Image 46.png">
             </div>
-            <div style="background-color: #FFFFFF; height: 90%; display: flex; flex-direction: row;">
-                <div style="background-color: #FFFFFF; width: 3.5%;">
-                    <img src="../../../assets/books/Image 1.png">
-                    <img src="../../../assets/books/Image 46.png">
+            <div class="row_2nd">
+                <div class="imgCell">
+                    <img class="imgMain" src="../../../assets/books/Image 11.png">
                 </div>
-                <div style="background-color: #FFFFFF; width: 33.5%;">
-                    <div class="imgCell">
-                        <img class="imgMain" src="../../../assets/books/Image 11.png">
+            </div>
+            <div class="row_3rd">
+                <p class="description" >{{data.description}}</p>
+                <p class="author" >by {{data.author}}</p>
+                <div style="display: flex;">
+                    <div class="rate">
+                        <p style="color: white; margin: 0; width: 20px; height: 19px; text-align: left;
+                        font: normal normal bold 14px/19px Roboto;"> 4.5</p>
+                        <mat-icon class="star">grade</mat-icon>
+                    </div>
+                    <h5 class="quantity">({{data.quantity}})</h5>
+                </div>
+                <p class="price"> Rs. {{data.price}}</p>
+
+                <mat-divider></mat-divider>
+
+                <div class="details">
+                    <h4 class="heading">&#x25CF; Book Details</h4>
+                    <div class="bookContent">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus estundefined
                     </div>
                 </div>
-                <div style="background-color: #b36c6c; width: 63%;">
-                    <h1>{{data.description}}</h1>
+
+                <mat-divider></mat-divider>
+
+                <div style="margin-top: 10px;">
+                    <h3>Coustomer Feedback</h3>
+                    <div class="review">
+                        <h5 style="width: 70px;
+                        height: 16px;
+                        text-align: left;
+                        font: normal normal normal 12px/16px Roboto;
+                        letter-spacing: 0px;
+                        color: #0A0102;
+                        opacity: 1">overall rating</h5>
+                        <div >
+                            star Rating
+                        </div>
+                        <input class="searchInput" type="text" placeholder="write a review">
+                        <div>
+                            <button type="submit" class="button" mat-flat-button color="warn">Submit</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
     
 </div>
-
-<!-- <div class="home">
-            Home
-        </div>
-        <div style="display: flex; height: 91%;">
-            <div class="imgDiv">
-                <div style="width: 9%;">
-                    <img src="../../../assets/books/Image 1.png">
-                    <img src="../../../assets/books/Image 46.png">
-                </div>
-                <div style=" width: 91%;">
-                    <div class="imgCell">
-                        <img class="imgMain" src="../../../assets/books/Image 11.png">
-                    </div>
-                </div>
-            </div>
-            <div class="content">
-                gfgfdg
-            </div>
-        </div> -->

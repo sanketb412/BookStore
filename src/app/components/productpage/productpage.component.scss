@@ -13,18 +13,22 @@
     margin: 0px 253px 0px 253px;
 }
 
+.content{
+   background-color: #FFFFFF; height: 90%; display: flex; flex-direction: row;
+}
 
-// .home{
-//     background-color: #FFFFFF;
-//     height: 9%;
-// }
+.row_1st{
+    background-color: #FFFFFF; width: 3.5%;
+}
 
-// .imgDiv{
-//     width: 35%;
-//     height: 100%;
-//     background-color: #FFFFFF;
-//     display: flex;
-// }
+.row_2nd{
+    background-color: #FFFFFF; width: 33.5%;
+}
+
+.row_3rd{
+    background-color: #FFFFFF; width: 63%;
+    padding: 0px 0px 0px 50px;
+}
 
 .imgCell{
     width: 361px;
@@ -41,9 +45,129 @@
     height: 367px;
     opacity: 1;
 }
-// .content{
-//     background-color: aqua;
-//     height: 100%;
-//     width: 60%;
-// }
 
+.description{
+    width: 100%;
+    height: 37px;
+    text-align: left;
+    font: normal normal normal 28px/37px Roboto;
+    letter-spacing: 0px;
+    color: #0A0102;
+    opacity: 1;
+    margin: 0%;
+}
+
+.author{
+    width: 114px;
+    height: 24px;
+    text-align: left;
+    font: normal normal normal 18px/24px Roboto;
+    letter-spacing: 0px;
+    color: #878787;
+    opacity: 1;
+}
+
+.rate{
+    width: 55px;
+    height: 25px;
+    background: #388E3C 0% 0% no-repeat padding-box;
+    border-radius: 1px;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 3px;
+    justify-content: space-evenly;
+}
+
+.star{
+    color: white;
+    font-size: 11px;
+    width: 11px;
+    height: 11px;
+}
+
+.quantity{
+    width: 27px;
+    height: 20px;
+    text-align: center;
+    font: normal normal normal 15px/20px Roboto;
+    letter-spacing: 0px;
+    color: #878787;
+    opacity: 1;
+    margin-left: 11px;
+}
+
+.price{
+    width: 119px;
+    text-align: left;
+    font: normal normal bold 30px/39px Roboto;
+    letter-spacing: 0px;
+    color: #0A0102;
+    opacity: 1;
+    padding-top: 10px;
+}
+
+.details{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 580px;
+    height: 100px;
+    opacity: 1;
+    background-color: #FFFFFF;
+}
+
+.heading{
+    width: 100px;
+    margin: 0;
+    height: 20px;
+    text-align: left;
+    font: normal normal normal 15px/20px Roboto;
+    letter-spacing: 0px;
+    color: #878787;
+    opacity: 1;
+}
+
+.bookContent{
+    width: 542px;
+    height: 80px;
+    text-align: left;
+    font: normal normal normal 12px/16px Roboto;
+    letter-spacing: 0px;
+    color: #3f3b3b;
+    opacity: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 15px;
+}
+
+.review{
+    width: 557px;
+    height: 192px;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    // opacity: 0.63;
+    padding: 10px 20px 10px 20px;
+}
+
+.searchInput {
+    margin-top: 20px;
+    width: 300px;
+    height: 31px;
+    text-align: left;
+    font: normal normal normal 15px/20px Roboto;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+    outline: none;
+    border: transparent;
+}
+
+.button{
+    margin-top: 35px;
+    margin-left: 471px;
+    width: 76px;
+    height: 32px;
+    background: #3371B5 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    opacity: 1;
+}
