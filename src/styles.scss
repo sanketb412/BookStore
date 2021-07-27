@@ -14,6 +14,7 @@
 // hue. Available color palettes: https://material.io/design/color/
 $bookstore-primary: mat.define-palette(mat.$indigo-palette);
 $bookstore-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$bookstore-white: mat.define-palette(mat.$gray-palette, 100);
 
 // The warn palette is optional (defaults to red).
 $bookstore-warn: mat.define-palette(mat.$red-palette);
@@ -25,6 +26,7 @@ $bookstore-theme: mat.define-light-theme((
     primary: $bookstore-primary,
     accent: $bookstore-accent,
     warn: $bookstore-warn,
+    cool: $bookstore-white,
   )
 ));
 

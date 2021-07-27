@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatBadgeModule } from '@angular/material/badge';
 
 import { LoginuserComponent } from './components/loginuser/loginuser.component';
 import { SignupuserComponent } from './components/signupuser/signupuser.component';
@@ -23,6 +24,7 @@ import { BooksComponent } from './components/books/books.component';
 import { AddressComponent } from './components/address/address.component';
 import { ProductpageComponent } from './components/productpage/productpage.component';
 import { ProductComponent } from './components/product/product.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { ProductComponent } from './components/product/product.component';
     BooksComponent,
     AddressComponent,
     ProductpageComponent,
-    ProductComponent
+    ProductComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,8 @@ import { ProductComponent } from './components/product/product.component';
     MatDividerModule,
     FormsModule,
     ReactiveFormsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
