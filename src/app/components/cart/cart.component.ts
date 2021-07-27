@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
+  displayAddress = true;
+
+  labelPosition: 'before' | 'after' = 'after';
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  address(){
+    this.displayAddress = false
+  }
 }

@@ -24,13 +24,70 @@
                     </div>
                         <mat-icon>expand_more</mat-icon>
                 </div>
-                <div class="order">
+                <div class="order" (click)="address()">
                     PLACE ORDER
                 </div>
             </div>
         </div>
-        <div class="address">
+        <div class="address" *ngIf="!displayAddress">
             <span>Address Details</span>
+        </div>
+        <div class="custermerAddress" *ngIf="displayAddress" >
+            <div style=" width: 75%;">
+                <h2 class="details">Customer Details</h2>
+                <div style="display: flex; justify-content: space-between;">
+                    <div>
+                        <h4 style="margin: 0px;" class="textName">Full Name</h4>
+                        <mat-form-field appearance="outline" class="placewidth">
+                            <input matInput placeholder="" >
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <h4 style="margin: 0px;" class="textName">Mobile Number</h4>
+                        <mat-form-field appearance="outline" class="placewidth">
+                            <input matInput placeholder="" >
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <h4 style="margin: 0px;" class="textName">Address</h4>
+                    <mat-form-field appearance="outline" class="addressWidth">
+                        <input matInput placeholder="" >
+                    </mat-form-field>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-top: 35px;">
+                    <div>
+                        <h4 style="margin: 0px;" class="textName">City/town</h4>
+                        <mat-form-field appearance="outline" class="placewidth">
+                            <input matInput placeholder="" >
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <h4 style="margin: 0px;" class="textName">State</h4>
+                        <mat-form-field appearance="outline" class="placewidth">
+                            <input matInput placeholder="">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="margin-top: 10px;" class="textName">Type</h4>
+                    <mat-radio-group [(ngModel)]="labelPosition">
+                        <mat-radio-button class="example-margin" value="home">Home</mat-radio-button>
+                        <mat-radio-button class="example-margin" value="work">Work</mat-radio-button>
+                        <mat-radio-button class="example-margin" value="other">Other</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div class="newAddress">
+                    <span style="color: #A03037; padding: 20px 0px 20px 19px;">Add New Address</span>
+                </div>
+                <div>
+                    <div class="continue " (click)="address()">
+                        PLACE ORDER
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="address">
             <span>Order Summary</span>

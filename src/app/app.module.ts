@@ -14,6 +14,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
 
 import { LoginuserComponent } from './components/loginuser/loginuser.component';
 import { SignupuserComponent } from './components/signupuser/signupuser.component';
@@ -54,7 +56,9 @@ import { CartComponent } from './components/cart/cart.component';
     FormsModule,
     ReactiveFormsModule,
     MatMenuModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatCheckboxModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
