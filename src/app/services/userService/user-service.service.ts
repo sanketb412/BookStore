@@ -18,5 +18,4 @@ export class UserServiceService {
   login = (data: any) => {
     return this.httpService.post(`${this.url}/bookstore_user/login`, data)
   }
-
 }

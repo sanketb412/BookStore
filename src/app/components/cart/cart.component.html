@@ -5,6 +5,7 @@
         <div style="background-color: #FFFFFF; height: 5%; padding-top: 14px">
             Home/My cart
         </div>
+        <!-- Books details -->
         <div class="cart">
             <div>
                 <h3>My Cart()</h3>
@@ -29,10 +30,13 @@
                 </div>
             </div>
         </div>
-        <div class="address" *ngIf="!displayAddress">
+
+        <!-- Address -->
+        <div class="address" *ngIf="displayAddress">
             <span>Address Details</span>
         </div>
-        <div class="custermerAddress" *ngIf="displayAddress" >
+
+        <div class="custermerAddress" *ngIf="!displayAddress" >
             <div style=" width: 75%;">
                 <h2 class="details">Customer Details</h2>
                 <div style="display: flex; justify-content: space-between;">
@@ -83,12 +87,14 @@
                     <span style="color: #A03037; padding: 20px 0px 20px 19px;">Add New Address</span>
                 </div>
                 <div>
-                    <div class="continue " (click)="address()">
-                        PLACE ORDER
+                    <div class="continue ">
+                        Continue
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- summary -->
         <div class="address">
             <span>Order Summary</span>
         </div>

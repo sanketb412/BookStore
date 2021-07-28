@@ -32,10 +32,9 @@ export class LoginuserComponent implements OnInit {
       }
       
       this.service.login(dataLogin).subscribe((dataLogin: any) => {
-
-        localStorage.setItem("fullName", dataLogin["fullName"]);
+        console.log(dataLogin)
         localStorage.setItem("email", dataLogin["email"]);
-        localStorage.setItem("token", dataLogin["id"]);
+        localStorage.setItem("token", dataLogin.result.accessToken);
         this.router.navigate(['/home'])
         
       });
