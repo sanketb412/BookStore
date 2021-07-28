@@ -1,23 +1,31 @@
 <div class="container">
-    <app-header></app-header>
+    <app-header [cartBooks]="cartBooks"></app-header>
 
     <div class="main">
         <div style="background-color: #FFFFFF; height: 5%; padding-top: 14px">
             Home/My cart
         </div>
         <!-- Books details -->
-        <div class="cart">
+
+        <div class="cart">            
             <div>
                 <h3>My Cart()</h3>
-                <div class="book">
-                    <img src="../../../assets/books/Image 11.png">
-                    <div>
-                        <p>Books Description</p>
-                        <h5>Book Author</h5>
-                        <p>Price</p>
+                <ng-container *ngFor="let cartBook of cartBooks">
+                    <div class="book" style=" flex-direction: row;">
+                        <img src="../../../assets/books/Image 11.png">
+                        <div style="margin-left: 20px;">
+                            <span>{{cartBook.product_id.description}}</span>
+                            <h5 style="margin-bottom: 5px; color: #9D9D9D;">by {{cartBook.product_id.author}}</h5>
+                            <span style="font: normal normal bold 15px/18px Lato;
+                            letter-spacing: 0px;
+                            color: #0A0102;
+                            opacity: 1;">Rs. {{cartBook.product_id.price}}</span>
+                        </div>
                     </div>
-                </div>
+                    <mat-divider></mat-divider>
+                </ng-container>
             </div>
+            
             <div class="placeOrder">
                 <div class="location">
                     <div style="display: flex;align-items: flex-end;">
@@ -29,6 +37,7 @@
                     PLACE ORDER
                 </div>
             </div>
+            
         </div>
 
         <!-- Address -->

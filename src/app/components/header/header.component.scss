@@ -55,11 +55,13 @@
 }
 
 
-.headerButton{
+.headerButton {
     color:#FCFCFC;
     cursor: pointer;
+    background : #A03037
 }
 
-.mat-badge-content{
-    background : black
+::ng-deep.mat-badge-content{
+    background : #FFFFFF;
+    color: #A03037;
 }

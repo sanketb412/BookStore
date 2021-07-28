@@ -14,7 +14,7 @@
 
 .cart{
     width: 774px;
-    height: 251px;
+    // height: 251px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #d1d0d0;
     border-radius: 1px;
@@ -24,13 +24,13 @@
 }
 
 .book{
-    width: 236px;
+    width: 256px;
     height: 89px;
     // border: 1px solid #DCDCDC;
     opacity: 1;
     margin-top: 35px;
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
 }
 
 img{

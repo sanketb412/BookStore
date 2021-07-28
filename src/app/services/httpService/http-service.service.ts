@@ -6,15 +6,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class HttpServiceService {
 
-  tokenn: any
-
   constructor(private httpClient: HttpClient) {
-    this.tokenn = localStorage.getItem("token")
    }
 
   post(url: string, data: any, isHeaderRequired: any = false, token: any = null) {
     console.log(url, data);
-    let tokenOption = {headers: new HttpHeaders({"x-access-token": this.tokenn})};
+    let tokenOption = {headers: new HttpHeaders({"x-access-token": token})};
     console.log(tokenOption)
     return this.httpClient.post(url, data, isHeaderRequired && tokenOption)
   }

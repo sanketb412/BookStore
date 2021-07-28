@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
@@ -7,9 +7,14 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+  @Input() cartBooks: any ;
+
+  badgeContent: number | undefined;
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    this.badgeContent = this.cartBooks.length;
   }
 
   homepage(){
