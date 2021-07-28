@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BookServiceService } from 'src/app/services/bookService/book-service.service';
+import { SiblingService } from 'src/app/services/sibling/sibling.service';
 
 @Component({
   selector: 'app-cart',
@@ -16,7 +17,7 @@ export class CartComponent implements OnInit {
 
   token: any
 
-  constructor( private bookService: BookServiceService ) { }
+  constructor( private bookService: BookServiceService, private sibService: SiblingService ) { }
 
   ngOnInit(): void {
     this.token = localStorage.getItem('token')
@@ -32,6 +33,7 @@ export class CartComponent implements OnInit {
     this.bookService.getCart(this.token).subscribe((data:any)=>{
       this.cartBooks=data['result']
       console.log(this.cartBooks);
+      this.sibService.communicateMessage(this.cartBooks.length)
     })
   } 
 }

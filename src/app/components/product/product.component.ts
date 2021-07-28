@@ -23,6 +23,7 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
     this.token = localStorage.getItem('token')
     console.log(this.token);
+
   }
 
   toProductPage(id: any){
@@ -38,7 +39,7 @@ export class ProductComponent implements OnInit {
     this.service.addCart(reqData, this.token).subscribe((data) => {
       console.log(data)
     })
-    // this.displayAddress = false
+    this.displayAddress = false
   }
 
 }

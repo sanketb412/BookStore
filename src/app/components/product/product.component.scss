@@ -16,11 +16,11 @@
 }
 
 .productBody:hover{
-    box-shadow: 2px 2px 5px 2px rgba(173, 170, 170, 0.8);
+    box-shadow: 2px 11px 5px 5px rgba(173, 170, 170, 0.8);
 }
 
 .block{
-    height: 112px;
+    height: 115px;
     width: 233px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #E2E2E2;
@@ -132,4 +132,24 @@ div.description:hover {
     justify-content: space-around;
     width: 100%;
     height: 28px;
+}
+
+.addCartButton{
+    width: 42%; background-color: #A03037;color: #FFFFFF; border: 0; cursor: pointer;
+}
+
+.addCartButton:hover{
+    box-shadow: 2px 2px 5px 3px rgba(173, 170, 170, 0.8);
+}
+
+.whishlist{
+    width: 42%; color:white; background-color: #616161; border: 0; cursor: pointer;
+}
+
+.whishlist:hover{
+    box-shadow: 2px 2px 5px 3px rgba(173, 170, 170, 0.8);
+}
+
+.addedCart{
+    width: 100%; color:white; background-color: #333333; cursor: pointer;
 }

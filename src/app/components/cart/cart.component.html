@@ -1,5 +1,5 @@
 <div class="container">
-    <app-header [cartBooks]="cartBooks"></app-header>
+    <app-header></app-header>
 
     <div class="main">
         <div style="background-color: #FFFFFF; height: 5%; padding-top: 14px">
@@ -9,7 +9,7 @@
 
         <div class="cart">            
             <div>
-                <h3>My Cart()</h3>
+                <h3>My Cart({{cartBooks.length}})</h3>
                 <ng-container *ngFor="let cartBook of cartBooks">
                     <div class="book" style=" flex-direction: row;">
                         <img src="../../../assets/books/Image 11.png">
