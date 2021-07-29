@@ -9,8 +9,6 @@ import { SiblingService } from 'src/app/services/sibling/sibling.service';
 })
 export class HeaderComponent implements OnInit {
 
-  // @Input() cartBooks: any ;
-
   countItem:any
   badgeContent: any;
 
@@ -21,7 +19,6 @@ export class HeaderComponent implements OnInit {
       this.countItem = message
       console.log("Header count "+ this.countItem)
       this.badgeContent = this.countItem;
-      console.log(this.badgeContent)
     })
   }
 

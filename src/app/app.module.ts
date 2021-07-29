@@ -16,6 +16,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { LoginuserComponent } from './components/loginuser/loginuser.component';
 import { SignupuserComponent } from './components/signupuser/signupuser.component';
@@ -58,7 +59,8 @@ import { CartComponent } from './components/cart/cart.component';
     MatMenuModule,
     MatBadgeModule,
     MatCheckboxModule,
-    MatRadioModule
+    MatRadioModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
