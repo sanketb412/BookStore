@@ -10,11 +10,13 @@ import { SiblingService } from 'src/app/services/sibling/sibling.service';
 export class CartComponent implements OnInit {
 
   displayAddress = true;
+  displayButton = true;
 
   labelPosition: 'before' | 'after' = 'after';
   
   cartBooks: Array<any> =[];
 
+  removeById: any
   token: any
 
   constructor( private bookService: BookServiceService, private sibService: SiblingService ) { }
@@ -26,6 +28,7 @@ export class CartComponent implements OnInit {
 
   address(){
     this.displayAddress = false
+    this.displayButton = false
   }
 
   getItems = () => {
@@ -36,4 +39,11 @@ export class CartComponent implements OnInit {
       this.sibService.communicateMessage(this.cartBooks.length)
     })
   } 
+
+  removeItem=(data: any)=>{
+    console.log(data._id)
+    this.bookService.deleteItem(data._id, this.token).subscribe((data:any)=>{
+      this.getItems()
+    })
+  }
 }

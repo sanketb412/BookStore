@@ -21,4 +21,10 @@ export class HttpServiceService {
     let tokenOption = {headers: new HttpHeaders({"x-access-token": token})};
     return this.httpClient.get(url, isHeaderRequired && tokenOption)
   }
+
+  delete(url: string, isHeaderRequired: any = false, token: any = null) {  
+    console.log("data delete");
+    let tokenOption = {headers: new HttpHeaders({"x-access-token": token})};
+    return this.httpClient.delete(url, isHeaderRequired && tokenOption)
+  }
 }

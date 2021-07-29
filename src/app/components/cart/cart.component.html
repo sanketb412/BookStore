@@ -14,12 +14,13 @@
                     <div class="book" style=" flex-direction: row;">
                         <img src="../../../assets/books/Image 11.png">
                         <div style="margin-left: 20px;">
-                            <span>{{cartBook.product_id.description}}</span>
+                            <h4 style="width: 300px; margin-bottom: 0;">{{cartBook.product_id.description}}</h4>
                             <h5 style="margin-bottom: 5px; color: #9D9D9D;">by {{cartBook.product_id.author}}</h5>
                             <span style="font: normal normal bold 15px/18px Lato;
                             letter-spacing: 0px;
                             color: #0A0102;
                             opacity: 1;">Rs. {{cartBook.product_id.price}}</span>
+                            <h5 (click)="removeItem(cartBook)" style="cursor: pointer;">Remove</h5>
                         </div>
                     </div>
                     <mat-divider></mat-divider>
@@ -33,8 +34,11 @@
                     </div>
                         <mat-icon>expand_more</mat-icon>
                 </div>
-                <div class="order" (click)="address()">
+                <div class="order" *ngIf="displayButton" (click)="address()">
                     PLACE ORDER
+                </div>
+                <div *ngIf="!displayButton">
+
                 </div>
             </div>
             
