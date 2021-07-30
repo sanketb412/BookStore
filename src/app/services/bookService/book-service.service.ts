@@ -38,4 +38,13 @@ export class BookServiceService {
     console.log(data, token)
     return this.httpService.delete(`${this.url}/bookstore_user/remove_cart_item/${data}`, true, token)
   }
+
+  putAddress = (data: any, token: any) => {
+    return this.httpService.put(`${this.url}/bookstore_user/edit_user`, data, true, token)
+  }
+
+  order = (data: any, token: any) => {
+    // console.log(data, token)
+    return this.httpService.post(`${this.url}/bookstore_user/add/order`, data, true, token)
+  } 
 }

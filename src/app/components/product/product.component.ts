@@ -13,6 +13,7 @@ export class ProductComponent implements OnInit {
 
   @Input() books: any ;
 
+
   id:any
 
   cart1:any

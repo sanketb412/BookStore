@@ -34,7 +34,7 @@
                     </div>
                         <mat-icon>expand_more</mat-icon>
                 </div>
-                <div class="order" *ngIf="displayButton" (click)="address()">
+                <div class="order" *ngIf="displayButton" (click)="addressToggles()">
                     PLACE ORDER
                 </div>
                 <div *ngIf="!displayButton">
@@ -49,67 +49,95 @@
             <span>Address Details</span>
         </div>
 
-        <div class="custermerAddress" *ngIf="!displayAddress" >
+        <form class="custermerAddress" *ngIf="!displayAddress" (ngSubmit)="submit()" [formGroup]="contactForm">
             <div style=" width: 75%;">
                 <h2 class="details">Customer Details</h2>
                 <div style="display: flex; justify-content: space-between;">
                     <div>
                         <h4 style="margin: 0px;" class="textName">Full Name</h4>
                         <mat-form-field appearance="outline" class="placewidth">
-                            <input matInput placeholder="" >
+                            <input matInput placeholder="" formControlName="fullName">
                         </mat-form-field>
                     </div>
                     <div>
                         <h4 style="margin: 0px;" class="textName">Mobile Number</h4>
                         <mat-form-field appearance="outline" class="placewidth">
-                            <input matInput placeholder="" >
+                            <input matInput placeholder="" formControlName="phone">
                         </mat-form-field>
                     </div>
                 </div>
                 <div style="margin-top: 20px;">
-                    <h4 style="margin: 0px;" class="textName">Address</h4>
+                    <h4  style="margin: 0px;" class="textName">Address</h4>
                     <mat-form-field appearance="outline" class="addressWidth">
-                        <input matInput placeholder="" >
+                        <input matInput placeholder="" formControlName="fullAddress">
                     </mat-form-field>
                 </div>
                 <div style="display: flex; justify-content: space-between; margin-top: 35px;">
                     <div>
                         <h4 style="margin: 0px;" class="textName">City/town</h4>
                         <mat-form-field appearance="outline" class="placewidth">
-                            <input matInput placeholder="" >
+                            <input matInput placeholder="" formControlName="city">
                         </mat-form-field>
                     </div>
                     <div>
                         <h4 style="margin: 0px;" class="textName">State</h4>
                         <mat-form-field appearance="outline" class="placewidth">
-                            <input matInput placeholder="">
+                            <input matInput placeholder="" formControlName="state">
                         </mat-form-field>
                     </div>
                 </div>
                 <div>
                     <h4 style="margin-top: 10px;" class="textName">Type</h4>
-                    <mat-radio-group [(ngModel)]="labelPosition">
-                        <mat-radio-button class="example-margin" value="home">Home</mat-radio-button>
-                        <mat-radio-button class="example-margin" value="work">Work</mat-radio-button>
-                        <mat-radio-button class="example-margin" value="other">Other</mat-radio-button>
+                    <mat-radio-group formControlName="addressType">
+                        <mat-radio-button class="example-margin" value="Home">Home</mat-radio-button>
+                        <mat-radio-button class="example-margin" value="Office">Office</mat-radio-button>
+                        <mat-radio-button class="example-margin" value="Other">Other</mat-radio-button>
                     </mat-radio-group>
                 </div>
             </div>
             <div style="display: flex; flex-direction: column; justify-content: space-between;">
-                <div class="newAddress">
+                <div class="newAddress" *ngIf="displayContinueButton">
                     <span style="color: #A03037; padding: 20px 0px 20px 19px;">Add New Address</span>
                 </div>
                 <div>
-                    <div class="continue ">
+                    <div class="continue" (click)="submit()" *ngIf="displayContinueButton">
                         Continue
                     </div>
                 </div>
             </div>
-        </div>
+            <div *ngIf="!displayContinueButton">
+
+            </div>
+        </form>
 
         <!-- summary -->
-        <div class="address">
+        <div class="address" *ngIf="displayCart">
             <span>Order Summary</span>
+        </div>
+        <div class="cart" *ngIf="!displayCart">            
+            <div>
+                <ng-container *ngFor="let cartBook of cartBooks">
+                    <div class="book" style=" flex-direction: row;">
+                        <img src="../../../assets/books/Image 11.png">
+                        <div style="margin-left: 20px;">
+                            <h4 style="width: 300px; margin-bottom: 0;">{{cartBook.product_id.description}}</h4>
+                            <h5 style="margin-bottom: 5px; color: #9D9D9D;">by {{cartBook.product_id.author}}</h5>
+                            <span style="font: normal normal bold 15px/18px Lato;
+                            letter-spacing: 0px;
+                            color: #0A0102;
+                            opacity: 1;">Rs. {{cartBook.product_id.price}}</span>
+                        </div>
+                    </div>
+                    <mat-divider></mat-divider>
+                </ng-container>
+            </div>
+            
+            <div class="checkoutOrder">
+                <div (click)="checkout()" class="order">
+                    CHEACKOUT
+                </div>
+            </div>
+            
         </div>
     </div>
 

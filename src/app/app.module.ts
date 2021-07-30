@@ -28,6 +28,8 @@ import { AddressComponent } from './components/address/address.component';
 import { ProductpageComponent } from './components/productpage/productpage.component';
 import { ProductComponent } from './components/product/product.component';
 import { CartComponent } from './components/cart/cart.component';
+import { OrderplacedComponent } from './components/orderplaced/orderplaced.component';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +44,8 @@ import { CartComponent } from './components/cart/cart.component';
     AddressComponent,
     ProductpageComponent,
     ProductComponent,
-    CartComponent
+    CartComponent,
+    OrderplacedComponent,
   ],
   imports: [
     BrowserModule,
