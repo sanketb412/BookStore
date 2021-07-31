@@ -31,7 +31,10 @@ export class SignupuserComponent implements OnInit {
         }
         this.service.signup(data).subscribe((data) => {
           console.log(data)
-        })
+        },
+        error => {
+          console.log(error);
+        });
       }
   }
   

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SiblingService } from 'src/app/services/sibling/sibling.service';
 
@@ -8,7 +8,6 @@ import { SiblingService } from 'src/app/services/sibling/sibling.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
   countItem:any
   badgeContent: any;
 
@@ -19,7 +18,10 @@ export class HeaderComponent implements OnInit {
       this.countItem = message
       console.log("Header count "+ this.countItem)
       this.badgeContent = this.countItem;
-    })
+    },
+    error => {
+      console.log(error);
+    });
   }
 
   homepage(){

@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BookServiceService } from 'src/app/services/bookService/book-service.service';
+import { SiblingService } from 'src/app/services/sibling/sibling.service';
+
 
 @Component({
   selector: 'app-product',
@@ -15,16 +17,17 @@ export class ProductComponent implements OnInit {
   @Input() books: any ;
   
   id:any
-
+  cartBooks: Array<any> =[];
   cart1:any
 
   token: any
-  constructor( private router: Router, private service: BookServiceService,  private route: ActivatedRoute) { 
+  constructor( private router: Router, private service: BookServiceService,  private route: ActivatedRoute, private sibService: SiblingService) { 
   }
 
   ngOnInit(): void {
     this.token = localStorage.getItem('token')
     console.log(this.token);
+    this.getItems();
 
   }
 
@@ -40,9 +43,24 @@ export class ProductComponent implements OnInit {
     }
     this.service.addCart(reqData, this.token).subscribe((data) => {
       console.log(data)
-    })
-    this.displayAddress = false
+    },
+    error => {
+      console.log(error);
+    });
+    for (this.id of cart) {
+      this.displayAddress = false
+    }
   }
+
+  getItems = () => {
+    console.log("get cart API")
+    this.service.getCart(this.token).subscribe((data:any)=>{
+      this.cartBooks=data['result']
+
+      this.sibService.communicateMessage(this.cartBooks.length)
+    })
+
+  } 
 
 }
 

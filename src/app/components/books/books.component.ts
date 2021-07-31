@@ -21,7 +21,10 @@ export class BooksComponent implements OnInit {
       this.books=data['result']
       console.log(this.books) 
       console.log(this.books.length)
-    })
+    },
+    error => {
+      console.log(error);
+    });
   }
 
 }

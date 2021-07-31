@@ -24,6 +24,7 @@ export class CartComponent implements OnInit {
   address: any
   removeById: any
   token: any
+  length: any
 
   public contactForm!: FormGroup;
 
@@ -73,7 +74,9 @@ export class CartComponent implements OnInit {
           console.log(this.address);
         }
           
-        }
+      }
+      // this.length = this.cartBooks.length;
+
       this.sibService.communicateMessage(this.cartBooks.length)
       // console.log(this.address);  
       // patching:- (joint) not for hardcore   
@@ -85,7 +88,10 @@ export class CartComponent implements OnInit {
         "fullAddress": this.address.fullAddress,
         "state": this.address.state
       })
-    })
+    },
+    error => {
+      console.log(error);
+    });
 
   } 
 
@@ -93,7 +99,10 @@ export class CartComponent implements OnInit {
     // console.log(data._id)
     this.bookService.deleteItem(data._id, this.token).subscribe((data:any)=>{
       this.getItems()
-    })
+    },
+    error => {
+      console.log(error);
+    });
   }
 
   submit(){
@@ -136,6 +145,9 @@ export class CartComponent implements OnInit {
     this.bookService.order(OD, this.token).subscribe((response:any)=>{
       console.log(response)
       this.router.navigate(['/orderplaced']);
-    })
+    },
+    error => {
+      console.log(error);
+    });
   }
 }
