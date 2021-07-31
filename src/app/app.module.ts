@@ -17,6 +17,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 import { LoginuserComponent } from './components/loginuser/loginuser.component';
 import { SignupuserComponent } from './components/signupuser/signupuser.component';
@@ -24,12 +25,11 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BooksComponent } from './components/books/books.component';
-import { AddressComponent } from './components/address/address.component';
 import { ProductpageComponent } from './components/productpage/productpage.component';
 import { ProductComponent } from './components/product/product.component';
 import { CartComponent } from './components/cart/cart.component';
 import { OrderplacedComponent } from './components/orderplaced/orderplaced.component';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -41,7 +41,6 @@ import { OrderplacedComponent } from './components/orderplaced/orderplaced.compo
     HeaderComponent,
     FooterComponent,
     BooksComponent,
-    AddressComponent,
     ProductpageComponent,
     ProductComponent,
     CartComponent,
@@ -63,7 +62,9 @@ import { OrderplacedComponent } from './components/orderplaced/orderplaced.compo
     MatBadgeModule,
     MatCheckboxModule,
     MatRadioModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatPaginatorModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

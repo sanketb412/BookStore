@@ -153,3 +153,13 @@ img{
     flex-direction: column;
     justify-content: flex-end;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding: 0;
+}

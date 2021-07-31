@@ -9,7 +9,18 @@
            <input class="searchInput" type="text" placeholder="Search">
        </div>
        <div class="rightSection">
-           <mat-icon class="headerButton">person</mat-icon>
+           <mat-icon [matMenuTriggerFor]="menu" class="headerButton">person</mat-icon>
+           <mat-menu class="menu" #menu="matMenu" xPosition="before">
+                <span> Hello Sanket</span>
+                <div class="profileMenu">
+                    <h5>Profile</h5>
+                    <h5>My Orders</h5>
+                    <h5>My Wishlist</h5>
+                </div>
+                <button class="button" mat-stroked-button>
+                    Log Out
+                </button>
+            </mat-menu>
            <h5 style="margin: 0; color:#FCFCFC;">Profile</h5>
        </div>
        <div class="rightSection2">

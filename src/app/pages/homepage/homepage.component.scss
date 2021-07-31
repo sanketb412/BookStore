@@ -12,3 +12,13 @@
     background-color: #FFFFFF;
     margin: 0px 243px 0px 228px;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding: 0;
+}

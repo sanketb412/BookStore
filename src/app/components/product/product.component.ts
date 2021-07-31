@@ -11,15 +11,16 @@ export class ProductComponent implements OnInit {
 
   displayAddress = true;
 
+  p: number = 1 ;
   @Input() books: any ;
-
-
+  
   id:any
 
   cart1:any
 
   token: any
-  constructor( private router: Router, private service: BookServiceService,  private route: ActivatedRoute) { }
+  constructor( private router: Router, private service: BookServiceService,  private route: ActivatedRoute) { 
+  }
 
   ngOnInit(): void {
     this.token = localStorage.getItem('token')
