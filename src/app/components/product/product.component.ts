@@ -47,9 +47,20 @@ export class ProductComponent implements OnInit {
     error => {
       console.log(error);
     });
-    for (this.id of cart) {
-      this.displayAddress = false
+    this.getItems();
+  }
+
+  whishlist(cart: any){
+    let wishlistData = {
+      "id": cart._id,
+      "token": this.token
     }
+    this.service.addwishlist(wishlistData, this.token).subscribe((response)=>{
+      console.log(response)
+    },
+    error => {
+      console.log(error);
+    });
   }
 
   getItems = () => {

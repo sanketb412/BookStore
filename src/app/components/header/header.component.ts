@@ -31,4 +31,9 @@ export class HeaderComponent implements OnInit {
   getCart(){
     this.router.navigate(['/cart'])
   }
+
+  getwishlist(){
+    this.router.navigate(['/wishlist'])
+  }
+
 }

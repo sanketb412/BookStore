@@ -7,6 +7,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { ProductpageComponent } from './components/productpage/productpage.component';
 import { CartComponent } from './components/cart/cart.component';
 import { OrderplacedComponent } from './components/orderplaced/orderplaced.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 const routes: Routes = [
   {
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'home', component: HomepageComponent },
   { path: 'productpage', component: ProductpageComponent },
   { path: 'cart', component: CartComponent },
-  { path: 'orderplaced', component: OrderplacedComponent }
+  { path: 'orderplaced', component: OrderplacedComponent },
+  { path: 'wishlist', component: WishlistComponent }
 ];
 
 @NgModule({
