@@ -1,5 +1,5 @@
 .container{
-    width: 100%;
+    width: 1583px;
     height: 100%;
     background-color: #FFFFFF;
     display: flex;
@@ -10,7 +10,7 @@
 
 .main{
     background-color: #FFFFFF;
-    margin: 0px 243px 0px 228px;
+    margin: 0px 240px 0px 228px;
 }
 
 .footer {
@@ -21,4 +21,33 @@
     flex-shrink: 0;
     flex-grow: 0;
     padding: 0;
+}
+
+@media (max-width: 1010px){
+    .container{
+        width: 1000px;
+    }
+
+    .main{
+        margin: 0px 80px 0px 71px;
+    }
+
+}
+
+@media (max-width: 976px){
+    // .container{
+    //     width: 100%;
+    // }
+    
+    .main{
+        margin: 0px 53px 0px 60px;
+    }
+
+}
+
+
+@media (max-width: 950px){
+    // .container{
+    //     height: 0%;
+    // }
 }

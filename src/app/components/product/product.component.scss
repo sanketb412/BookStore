@@ -153,3 +153,10 @@ div.description:hover {
 .addedCart{
     width: 100%; background-color: #333333; color: #FFFFFF; border: 0; cursor: pointer;
 }
+
+@media (max-width: 705px){
+    .productBody{
+        height: 306px;
+        width: 252px;
+    }
+}
