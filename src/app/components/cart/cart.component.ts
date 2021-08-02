@@ -58,9 +58,10 @@ export class CartComponent implements OnInit {
     console.log("get cart API")
     this.bookService.getCart(this.token).subscribe((data:any)=>{
       this.cartBooks=data['result']
-      // console.log(this.cartBooks);
+      console.log(this.cartBooks);
       for (this.cartBook of this.cartBooks){
-        console.log(this.cartBook.user_id.address);
+        // console.log(this.cartBook.user_id.address);
+        console.log(this.cartBook.product_id._id);
         for (let ad of this.cartBook.user_id.address){
           // console.log(ad);
           this.address = {
@@ -71,7 +72,7 @@ export class CartComponent implements OnInit {
             "fullAddress": ad.fullAddress,
             "state": ad.state
           }
-          console.log(this.address);
+          // console.log(this.address);
         }
           
       }

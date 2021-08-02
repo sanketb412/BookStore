@@ -67,10 +67,14 @@
 }
 
 ::ng-deep.mat-menu-content:not(:empty){
-    width: 150px !important;
+    width:150px !important;
     padding: 15px 20px 15px 20px;
     display: flex;
     flex-direction: column;
+}
+
+.host ::ng-deep.mat-menu-panel {
+    max-width:fit-content !important;
 }
 
 .profileMenu{

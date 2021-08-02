@@ -163,3 +163,22 @@ img{
     flex-grow: 0;
     padding: 0;
 }
+
+@media (max-width: 1010px){
+    .main{
+        margin: 0px 59px 0px 68px;
+    }
+
+    .search {
+        width: 450px;
+    }
+
+    .rightSection{
+        margin-left: 18%;
+    }
+
+    .rightSection2{
+        margin-left: 9%
+    }
+
+}
