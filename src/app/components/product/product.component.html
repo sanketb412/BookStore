@@ -18,7 +18,7 @@
                 <h5 class="price"> Rs. {{book.price}}</h5>
                 
                 <div class="alternateButton" *ngIf="!book.displaybag">
-                    <button class="addCartButton" (click)="address(book)">ADD TO BAG</button>
+                    <button class="addCartButton" (click)="isAddedToCart(book)">ADD TO BAG</button>
                     <button class="whishlist" (click)="whishlist(book)"> &#x2764; WISHLIST</button>
                 </div>
                 <div class="alternateButton" *ngIf="book.displaybag">
